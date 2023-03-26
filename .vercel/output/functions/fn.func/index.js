@@ -55,6 +55,14 @@ var __privateSet = (obj, member, value, setter) => {
   return value;
 };
 
+// .svelte-kit/output/server/chunks/prod-ssr.js
+var DEV;
+var init_prod_ssr = __esm({
+  ".svelte-kit/output/server/chunks/prod-ssr.js"() {
+    DEV = false;
+  }
+});
+
 // .svelte-kit/output/server/chunks/index.js
 function noop() {
 }
@@ -588,8 +596,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/entry/error.svelte.1731a9e9.js";
-    imports2 = ["_app/immutable/entry/error.svelte.1731a9e9.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.48935173.js"];
+    file2 = "_app/immutable/entry/error.svelte.aefd7c83.js";
+    imports2 = ["_app/immutable/entry/error.svelte.aefd7c83.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.8ca1983d.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -713,7 +721,7 @@ var init_page_server_ts = __esm({
       {
         name: "Muela Rhino Olive",
         description: "Knife",
-        image: "/images/essentials/muela-rhino-olive.jpg",
+        image: "/essentials/muela-rhino-olive.jpg",
         url: "https://amzn.to/40z0hg2",
         price: 69.6,
         weight: 207
@@ -721,7 +729,7 @@ var init_page_server_ts = __esm({
       {
         name: "Lansky Blademedic",
         description: "Knife Sharpener",
-        image: "/images/essentials/lansky-blade-medic.jpg",
+        image: "/essentials/lansky-blade-medic.jpg",
         url: "https://amzn.to/3lQjGKB",
         price: 19.32,
         weight: 105
@@ -729,7 +737,7 @@ var init_page_server_ts = __esm({
       {
         name: 'Camp Buddy "Bamboo" XXL',
         description: "Fire Steel",
-        image: "/images/essentials/camp-buddy.jpg",
+        image: "/essentials/camp-buddy.jpg",
         url: "https://amzn.to/40iCtxk",
         price: 21.99,
         weight: 200
@@ -737,7 +745,7 @@ var init_page_server_ts = __esm({
       {
         name: "Brotree 550/9 30m ",
         description: "Paracord",
-        image: "/images/essentials/brotree.jpg",
+        image: "/essentials/brotree.jpg",
         url: "https://amzn.to/40fEhar",
         price: 14.99,
         weight: 250
@@ -745,7 +753,7 @@ var init_page_server_ts = __esm({
       {
         name: "DD Hammocks Olive",
         description: "Tarp",
-        image: "/images/essentials/dd-tarp.jpg",
+        image: "/essentials/dd-tarp.jpg",
         url: "https://amzn.to/42JDiR8",
         price: 69.99,
         weight: 790,
@@ -757,7 +765,7 @@ var init_page_server_ts = __esm({
       {
         name: "Nitecore NU43",
         description: "Head Lamp",
-        image: "/images/essentials/nitecore-nu43.jpg",
+        image: "/essentials/nitecore-nu43.jpg",
         url: "https://amzn.to/3nqyIaE",
         price: 69.99,
         weight: 115
@@ -765,7 +773,7 @@ var init_page_server_ts = __esm({
       {
         name: "Mardingtop 75L green",
         description: "Backpack",
-        image: "/images/essentials/mardingtop-75.jpg",
+        image: "/essentials/mardingtop-75.jpg",
         url: "https://amzn.to/3TMRMM9",
         price: 102.99,
         weight: 2260,
@@ -778,7 +786,7 @@ var init_page_server_ts = __esm({
       {
         name: "Nordmut Poles Telescope",
         description: "Trekking Poles",
-        image: "/images/essentials/nordmut.jpg",
+        image: "/essentials/nordmut.jpg",
         url: "https://amzn.to/40EflZF",
         price: 39.9,
         weight: 970
@@ -786,7 +794,7 @@ var init_page_server_ts = __esm({
       {
         name: "Hultafors Hultan",
         description: "Hatchet",
-        image: "/images/essentials/hultafors-hachet.jpg",
+        image: "/essentials/hultafors-hachet.jpg",
         url: "https://amzn.to/3npfjXf",
         price: 99.9,
         weight: 970
@@ -796,15 +804,22 @@ var init_page_server_ts = __esm({
 });
 
 // .svelte-kit/output/server/chunks/ProductListMeta.js
-var Product, ProductList, ProductListMeta;
+var dev, Product, ProductList, ProductListMeta;
 var init_ProductListMeta = __esm({
   ".svelte-kit/output/server/chunks/ProductListMeta.js"() {
     init_chunks();
+    init_prod_ssr();
+    dev = DEV;
     Product = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      console.log(dev);
       let { data } = $$props;
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      return `<div class="product">${data.image !== "" ? `<img class="product-image"${add_attribute("src", data.image, 0)}${add_attribute("alt", data.name, 0)} loading="lazy">` : ``}
+      return `<div class="product">${data.image !== "" ? `<img class="product-image"${add_attribute(
+        "src",
+        "/static/images" + data.image,
+        0
+      )}${add_attribute("alt", data.name, 0)} loading="lazy">` : ``}
   <a class="overlay"${add_attribute("href", data.url, 0)}${add_attribute("title", data.name, 0)} rel="noreferrer noopener" target="_blank"${add_attribute("aria-disabled", data.url === "", 0)}><h3 class="product-title">${escape(data.name)}</h3>
       <p class="product-description">${escape(data.description)}</p>
       <div class="details">${data.weight ? `<div class="weight">${escape(data.weight)}g</div>` : ``}
@@ -893,9 +908,9 @@ var init__5 = __esm({
     init_page_server_ts();
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/entry/essentials-page.svelte.e2200851.js";
+    file5 = "_app/immutable/entry/essentials-page.svelte.caacae57.js";
     server_id = "src/routes/essentials/+page.server.ts";
-    imports5 = ["_app/immutable/entry/essentials-page.svelte.e2200851.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.fc2e71b6.js"];
+    imports5 = ["_app/immutable/entry/essentials-page.svelte.caacae57.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.0424cc4d.js"];
     stylesheets5 = [];
     fonts5 = [];
   }
@@ -918,7 +933,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "Vaude Sioux 800 SYN",
         description: "Sleeping Bag",
-        image: "/images/sleep/vaude-sioux-800.jpg",
+        image: "/sleep/vaude-sioux-800.jpg",
         url: "https://amzn.to/3LSMQnd",
         price: 88.99,
         weight: 1500,
@@ -930,7 +945,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "Exped Dura 5R LW",
         description: "Camping Mat",
-        image: "/images/sleep/exped-dura-5r.jpg",
+        image: "/sleep/exped-dura-5r.jpg",
         url: "https://www.exped.com/de/produkte/schlafmatten/dura-5r",
         price: 180,
         weight: 1045,
@@ -942,7 +957,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "Flextailgear Tiny Pump 2X",
         description: "Mat Pump",
-        image: "/images/sleep/flextailgear-tiny-pump.jpg",
+        image: "/sleep/flextailgear-tiny-pump.jpg",
         url: "https://amzn.to/3JOQfkf",
         price: 39.99,
         weight: 187
@@ -950,7 +965,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "Forceatt 2P green",
         description: "Tent",
-        image: "/images/sleep/forceatt-tent.jpg",
+        image: "/sleep/forceatt-tent.jpg",
         url: "https://amzn.to/3ZjYFWD",
         price: 78.76,
         weight: 2580,
@@ -962,7 +977,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "OneTigris Kompound",
         description: "Hammock",
-        image: "/images/sleep/onetigris-kompound.jpg",
+        image: "/sleep/onetigris-kompound.jpg",
         url: "https://amzn.to/3z9I1hE",
         price: 60.99,
         weight: 910,
@@ -974,7 +989,7 @@ var init_page_server_ts2 = __esm({
       {
         name: "OneTigris Night Protector armeegr\xFCn",
         description: "Underquilt",
-        image: "/images/sleep/onetigris-night-protector.jpg",
+        image: "/sleep/onetigris-night-protector.jpg",
         url: "https://amzn.to/3z6RI0b",
         price: 65.79,
         weight: 800,
@@ -1030,13 +1045,16 @@ var init__6 = __esm({
     init_page_server_ts2();
     index6 = 5;
     component6 = async () => (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
-    file6 = "_app/immutable/entry/sleep-page.svelte.3657b384.js";
+    file6 = "_app/immutable/entry/sleep-page.svelte.56ac4502.js";
     server_id2 = "src/routes/sleep/+page.server.ts";
-    imports6 = ["_app/immutable/entry/sleep-page.svelte.3657b384.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.fc2e71b6.js"];
+    imports6 = ["_app/immutable/entry/sleep-page.svelte.56ac4502.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.0424cc4d.js"];
     stylesheets6 = [];
     fonts6 = [];
   }
 });
+
+// .svelte-kit/output/server/index.js
+init_prod_ssr();
 
 // .svelte-kit/output/server/chunks/internal.js
 init_chunks();
@@ -1202,7 +1220,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1uilake"
+  version_hash: "1w5dcoo"
 };
 function get_hooks() {
   return {};
@@ -1653,7 +1671,6 @@ function stringify_primitive2(thing) {
 init_chunks();
 var import_cookie = __toESM(require_cookie(), 1);
 var set_cookie_parser = __toESM(require_set_cookie(), 1);
-var DEV = false;
 function negotiate(accept, types) {
   const parts = [];
   accept.split(",").forEach((str, i) => {
@@ -4438,7 +4455,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set([".DS_Store", "favicon.png", "images/.DS_Store", "images/essentials/brotree.jpg", "images/essentials/camp-buddy.jpg", "images/essentials/dd-tarp.jpg", "images/essentials/hultafors-hachet.jpg", "images/essentials/lansky-blade-medic.jpg", "images/essentials/mardingtop-75.jpg", "images/essentials/muela-rhino-olive.jpg", "images/essentials/nitecore-nu43.jpg", "images/essentials/nordmut.jpg", "images/essentials/rucksack.jpg", "images/hero.jpg", "images/sleep/exped-dura-5r.jpg", "images/sleep/flextailgear-tiny-pump.jpg", "images/sleep/forceatt-tent.jpg", "images/sleep/onetigris-kompound.jpg", "images/sleep/onetigris-night-protector.jpg", "images/sleep/vaude-sioux-800.jpg"]),
   mimeTypes: { ".png": "image/png", ".jpg": "image/jpeg" },
   _: {
-    client: { "start": { "file": "_app/immutable/entry/start.d8c37fd8.js", "imports": ["_app/immutable/entry/start.d8c37fd8.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.48935173.js"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.409caea0.js", "imports": ["_app/immutable/entry/app.409caea0.js", "_app/immutable/chunks/index.22788120.js"], "stylesheets": [], "fonts": [] } },
+    client: { "start": { "file": "_app/immutable/entry/start.419f6210.js", "imports": ["_app/immutable/entry/start.419f6210.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.8ca1983d.js"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.f2785b8b.js", "imports": ["_app/immutable/entry/app.f2785b8b.js", "_app/immutable/chunks/index.22788120.js"], "stylesheets": [], "fonts": [] } },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

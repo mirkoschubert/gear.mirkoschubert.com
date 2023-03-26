@@ -4,13 +4,13 @@
   import { dev } from '$app/environment';
 
   console.log(dev);
-  
+
   export let data: ProductType;
 </script>
 
 <div class="product">
   {#if data.image !== ''}
-    <img class="product-image" src={dev ? '/images' + data.image : '/static/images/' + data.image} alt={data.name} loading="lazy" />
+    <img class="product-image" src={dev ? '/images' + data.image : '/static/images' + data.image} alt={data.name} loading="lazy" />
   {/if}
   <a class="overlay" href={data.url} title={data.name} rel="noreferrer noopener" target="_blank" aria-disabled={data.url === ''}>
       <h3 class="product-title">{data.name}</h3>
