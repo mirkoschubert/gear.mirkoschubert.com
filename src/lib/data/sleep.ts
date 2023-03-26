@@ -4,7 +4,7 @@ export default [
   {
     name: 'Vaude Sioux 800 SYN',
     description: 'Sleeping Bag',
-    image: '/sleep/vaude-sioux-800.jpg',
+    image: 'images/sleep/vaude-sioux-800.jpg',
     url: 'https://amzn.to/3LSMQnd',
     price: 88.99,
     weight: 1500,
@@ -16,7 +16,7 @@ export default [
   {
     name: 'Exped Dura 5R LW',
     description: 'Camping Mat',
-    image: '/sleep/exped-dura-5r.jpg',
+    image: 'images/sleep/exped-dura-5r.jpg',
     url: 'https://www.exped.com/de/produkte/schlafmatten/dura-5r',
     price: 180,
     weight: 1045,
@@ -28,7 +28,7 @@ export default [
   {
     name: 'Flextailgear Tiny Pump 2X',
     description: 'Mat Pump',
-    image: '/sleep/flextailgear-tiny-pump.jpg',
+    image: 'images/sleep/flextailgear-tiny-pump.jpg',
     url: 'https://amzn.to/3JOQfkf',
     price: 39.99,
     weight: 187,
@@ -36,7 +36,7 @@ export default [
   {
     name: 'Forceatt 2P green',
     description: 'Tent',
-    image: '/sleep/forceatt-tent.jpg',
+    image: 'images/sleep/forceatt-tent.jpg',
     url: 'https://amzn.to/3ZjYFWD',
     price: 78.76,
     weight: 2580,
@@ -48,7 +48,7 @@ export default [
   {
     name: 'OneTigris Kompound',
     description: 'Hammock',
-    image: '/sleep/onetigris-kompound.jpg',
+    image: 'images/sleep/onetigris-kompound.jpg',
     url: 'https://amzn.to/3z9I1hE',
     price: 60.99,
     weight: 910,
@@ -60,7 +60,7 @@ export default [
   {
     name: 'OneTigris Night Protector armeegrün',
     description: 'Underquilt',
-    image: '/sleep/onetigris-night-protector.jpg',
+    image: 'images/sleep/onetigris-night-protector.jpg',
     url: 'https://amzn.to/3z6RI0b',
     price: 65.79,
     weight: 800,
