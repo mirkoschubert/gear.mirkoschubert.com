@@ -3,6 +3,8 @@
 
   import { dev } from '$app/environment';
 
+  console.log(dev);
+  
   export let data: ProductType;
 </script>
 
