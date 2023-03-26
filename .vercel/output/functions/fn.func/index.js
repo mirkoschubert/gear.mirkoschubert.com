@@ -77,8 +77,8 @@ function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
-function set_current_component(component6) {
-  current_component = component6;
+function set_current_component(component7) {
+  current_component = component7;
 }
 function get_current_component() {
   if (!current_component)
@@ -113,13 +113,13 @@ function each(items, fn) {
   }
   return str;
 }
-function validate_component(component6, name) {
-  if (!component6 || !component6.$$render) {
+function validate_component(component7, name) {
+  if (!component7 || !component7.$$render) {
     if (name === "svelte:component")
       name += " this={...}";
     throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name}>.`);
   }
-  return component6;
+  return component7;
 }
 function create_ssr_component(fn) {
   function $$render(result, props, bindings, slots, context) {
@@ -189,20 +189,20 @@ var require_cookie = __commonJS({
       var obj = {};
       var opt = options2 || {};
       var dec = opt.decode || decode;
-      var index6 = 0;
-      while (index6 < str.length) {
-        var eqIdx = str.indexOf("=", index6);
+      var index7 = 0;
+      while (index7 < str.length) {
+        var eqIdx = str.indexOf("=", index7);
         if (eqIdx === -1) {
           break;
         }
-        var endIdx = str.indexOf(";", index6);
+        var endIdx = str.indexOf(";", index7);
         if (endIdx === -1) {
           endIdx = str.length;
         } else if (endIdx < eqIdx) {
-          index6 = str.lastIndexOf(";", eqIdx - 1) + 1;
+          index7 = str.lastIndexOf(";", eqIdx - 1) + 1;
           continue;
         }
-        var key2 = str.slice(index6, eqIdx).trim();
+        var key2 = str.slice(index7, eqIdx).trim();
         if (void 0 === obj[key2]) {
           var val = str.slice(eqIdx + 1, endIdx).trim();
           if (val.charCodeAt(0) === 34) {
@@ -210,7 +210,7 @@ var require_cookie = __commonJS({
           }
           obj[key2] = tryDecode(val, dec);
         }
-        index6 = endIdx + 1;
+        index7 = endIdx + 1;
       }
       return obj;
     }
@@ -499,6 +499,7 @@ var init_layout_svelte = __esm({
     });
     Navigation = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<nav class="navigation"><a href="essentials" class="item">Essentials</a>
+  <a href="sleep" class="item">Sleep</a>
   <a href="about" class="item">About</a></nav>`;
     });
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -527,8 +528,8 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     index = 0;
     component = async () => (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
-    file = "_app/immutable/entry/_layout.svelte.1fb1bdd1.js";
-    imports = ["_app/immutable/entry/_layout.svelte.1fb1bdd1.js", "_app/immutable/chunks/index.22788120.js"];
+    file = "_app/immutable/entry/_layout.svelte.32d15010.js";
+    imports = ["_app/immutable/entry/_layout.svelte.32d15010.js", "_app/immutable/chunks/index.22788120.js"];
     stylesheets = ["_app/immutable/assets/_layout.750d5e6c.css"];
     fonts = [];
   }
@@ -587,8 +588,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    file2 = "_app/immutable/entry/error.svelte.dcb2f6be.js";
-    imports2 = ["_app/immutable/entry/error.svelte.dcb2f6be.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.480f0eda.js"];
+    file2 = "_app/immutable/entry/error.svelte.1731a9e9.js";
+    imports2 = ["_app/immutable/entry/error.svelte.1731a9e9.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.48935173.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -712,7 +713,7 @@ var init_page_server_ts = __esm({
       {
         name: "Muela Rhino Olive",
         description: "Knife",
-        image: "/images/essentials/rucksack.jpg",
+        image: "/images/essentials/muela-rhino-olive.jpg",
         url: "https://amzn.to/40z0hg2",
         price: 69.6,
         weight: 207
@@ -720,7 +721,7 @@ var init_page_server_ts = __esm({
       {
         name: "Lansky Blademedic",
         description: "Knife Sharpener",
-        image: "",
+        image: "/images/essentials/lansky-blade-medic.jpg",
         url: "https://amzn.to/3lQjGKB",
         price: 19.32,
         weight: 105
@@ -728,7 +729,7 @@ var init_page_server_ts = __esm({
       {
         name: 'Camp Buddy "Bamboo" XXL',
         description: "Fire Steel",
-        image: "",
+        image: "/images/essentials/camp-buddy.jpg",
         url: "https://amzn.to/40iCtxk",
         price: 21.99,
         weight: 200
@@ -736,7 +737,7 @@ var init_page_server_ts = __esm({
       {
         name: "Brotree 550/9 30m ",
         description: "Paracord",
-        image: "",
+        image: "/images/essentials/brotree.jpg",
         url: "https://amzn.to/40fEhar",
         price: 14.99,
         weight: 250
@@ -744,7 +745,7 @@ var init_page_server_ts = __esm({
       {
         name: "DD Hammocks Olive",
         description: "Tarp",
-        image: "",
+        image: "/images/essentials/dd-tarp.jpg",
         url: "https://amzn.to/42JDiR8",
         price: 69.99,
         weight: 790,
@@ -756,7 +757,7 @@ var init_page_server_ts = __esm({
       {
         name: "Nitecore NU43",
         description: "Head Lamp",
-        image: "",
+        image: "/images/essentials/nitecore-nu43.jpg",
         url: "https://amzn.to/3nqyIaE",
         price: 69.99,
         weight: 115
@@ -764,7 +765,7 @@ var init_page_server_ts = __esm({
       {
         name: "Mardingtop 75L green",
         description: "Backpack",
-        image: "",
+        image: "/images/essentials/mardingtop-75.jpg",
         url: "https://amzn.to/3TMRMM9",
         price: 102.99,
         weight: 2260,
@@ -777,7 +778,7 @@ var init_page_server_ts = __esm({
       {
         name: "Nordmut Poles Telescope",
         description: "Trekking Poles",
-        image: "",
+        image: "/images/essentials/nordmut.jpg",
         url: "https://amzn.to/40EflZF",
         price: 39.9,
         weight: 970
@@ -785,7 +786,7 @@ var init_page_server_ts = __esm({
       {
         name: "Hultafors Hultan",
         description: "Hatchet",
-        image: "",
+        image: "/images/essentials/hultafors-hachet.jpg",
         url: "https://amzn.to/3npfjXf",
         price: 99.9,
         weight: 970
@@ -794,16 +795,11 @@ var init_page_server_ts = __esm({
   }
 });
 
-// .svelte-kit/output/server/entries/pages/essentials/_page.svelte.js
-var page_svelte_exports3 = {};
-__export(page_svelte_exports3, {
-  default: () => Page3
-});
-var Product, ProductList, ProductListMeta, Page3;
-var init_page_svelte3 = __esm({
-  ".svelte-kit/output/server/entries/pages/essentials/_page.svelte.js"() {
+// .svelte-kit/output/server/chunks/ProductListMeta.js
+var Product, ProductList, ProductListMeta;
+var init_ProductListMeta = __esm({
+  ".svelte-kit/output/server/chunks/ProductListMeta.js"() {
     init_chunks();
-    init_Section();
     Product = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { data } = $$props;
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
@@ -843,6 +839,20 @@ var init_page_svelte3 = __esm({
   <div class="details"><div class="price">${escape(price.toFixed(2))}\u20AC</div>
     <div class="weight">${escape(weight)}g</div></div></div>`;
     });
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/essentials/_page.svelte.js
+var page_svelte_exports3 = {};
+__export(page_svelte_exports3, {
+  default: () => Page3
+});
+var Page3;
+var init_page_svelte3 = __esm({
+  ".svelte-kit/output/server/entries/pages/essentials/_page.svelte.js"() {
+    init_chunks();
+    init_Section();
+    init_ProductListMeta();
     Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { data } = $$props;
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
@@ -883,11 +893,148 @@ var init__5 = __esm({
     init_page_server_ts();
     index5 = 4;
     component5 = async () => (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    file5 = "_app/immutable/entry/essentials-page.svelte.aae2036c.js";
+    file5 = "_app/immutable/entry/essentials-page.svelte.e2200851.js";
     server_id = "src/routes/essentials/+page.server.ts";
-    imports5 = ["_app/immutable/entry/essentials-page.svelte.aae2036c.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js"];
+    imports5 = ["_app/immutable/entry/essentials-page.svelte.e2200851.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.fc2e71b6.js"];
     stylesheets5 = [];
     fonts5 = [];
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/sleep/_page.server.ts.js
+var page_server_ts_exports2 = {};
+__export(page_server_ts_exports2, {
+  load: () => load2
+});
+async function load2() {
+  return {
+    sleep
+  };
+}
+var sleep;
+var init_page_server_ts2 = __esm({
+  ".svelte-kit/output/server/entries/pages/sleep/_page.server.ts.js"() {
+    sleep = [
+      {
+        name: "Vaude Sioux 800 SYN",
+        description: "Sleeping Bag",
+        image: "/images/sleep/vaude-sioux-800.jpg",
+        url: "https://amzn.to/3LSMQnd",
+        price: 88.99,
+        weight: 1500,
+        size: {
+          width: 30,
+          height: 25
+        }
+      },
+      {
+        name: "Exped Dura 5R LW",
+        description: "Camping Mat",
+        image: "/images/sleep/exped-dura-5r.jpg",
+        url: "https://www.exped.com/de/produkte/schlafmatten/dura-5r",
+        price: 180,
+        weight: 1045,
+        size: {
+          width: 15,
+          height: 27
+        }
+      },
+      {
+        name: "Flextailgear Tiny Pump 2X",
+        description: "Mat Pump",
+        image: "/images/sleep/flextailgear-tiny-pump.jpg",
+        url: "https://amzn.to/3JOQfkf",
+        price: 39.99,
+        weight: 187
+      },
+      {
+        name: "Forceatt 2P green",
+        description: "Tent",
+        image: "/images/sleep/forceatt-tent.jpg",
+        url: "https://amzn.to/3ZjYFWD",
+        price: 78.76,
+        weight: 2580,
+        size: {
+          width: 41,
+          height: 14
+        }
+      },
+      {
+        name: "OneTigris Kompound",
+        description: "Hammock",
+        image: "/images/sleep/onetigris-kompound.jpg",
+        url: "https://amzn.to/3z9I1hE",
+        price: 60.99,
+        weight: 910,
+        size: {
+          width: 30,
+          height: 20
+        }
+      },
+      {
+        name: "OneTigris Night Protector armeegr\xFCn",
+        description: "Underquilt",
+        image: "/images/sleep/onetigris-night-protector.jpg",
+        url: "https://amzn.to/3z6RI0b",
+        price: 65.79,
+        weight: 800,
+        size: {
+          width: 33,
+          height: 20
+        }
+      }
+    ];
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/sleep/_page.svelte.js
+var page_svelte_exports4 = {};
+__export(page_svelte_exports4, {
+  default: () => Page4
+});
+var Page4;
+var init_page_svelte4 = __esm({
+  ".svelte-kit/output/server/entries/pages/sleep/_page.svelte.js"() {
+    init_chunks();
+    init_Section();
+    init_ProductListMeta();
+    Page4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { data } = $$props;
+      if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+        $$bindings.data(data);
+      return `<main>${validate_component(Section, "Section").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(ProductListMeta, "ProductListMeta").$$render($$result, { title: "Sleep", data: data.sleep }, {}, {})}
+    ${validate_component(ProductList, "ProductList").$$render($$result, { data: data.sleep }, {}, {})}`;
+        }
+      })}</main>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/nodes/5.js
+var __exports6 = {};
+__export(__exports6, {
+  component: () => component6,
+  file: () => file6,
+  fonts: () => fonts6,
+  imports: () => imports6,
+  index: () => index6,
+  server: () => page_server_ts_exports2,
+  server_id: () => server_id2,
+  stylesheets: () => stylesheets6
+});
+var index6, component6, file6, server_id2, imports6, stylesheets6, fonts6;
+var init__6 = __esm({
+  ".svelte-kit/output/server/nodes/5.js"() {
+    init_page_server_ts2();
+    index6 = 5;
+    component6 = async () => (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
+    file6 = "_app/immutable/entry/sleep-page.svelte.3657b384.js";
+    server_id2 = "src/routes/sleep/+page.server.ts";
+    imports6 = ["_app/immutable/entry/sleep-page.svelte.3657b384.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/Section.bf24981b.js", "_app/immutable/chunks/ProductListMeta.fc2e71b6.js"];
+    stylesheets6 = [];
+    fonts6 = [];
   }
 });
 
@@ -1055,7 +1202,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "13m9w45"
+  version_hash: "1uilake"
 };
 function get_hooks() {
   return {};
@@ -1381,13 +1528,13 @@ function stringify(value, reducers) {
       return NEGATIVE_INFINITY;
     if (thing === 0 && 1 / thing < 0)
       return NEGATIVE_ZERO;
-    const index7 = p++;
-    indexes.set(thing, index7);
+    const index8 = p++;
+    indexes.set(thing, index8);
     for (const { key: key2, fn } of custom) {
       const value2 = fn(thing);
       if (value2) {
-        stringified[index7] = `["${key2}",${flatten(value2)}]`;
-        return index7;
+        stringified[index8] = `["${key2}",${flatten(value2)}]`;
+        return index8;
       }
     }
     let str = "";
@@ -1479,12 +1626,12 @@ function stringify(value, reducers) {
           }
       }
     }
-    stringified[index7] = str;
-    return index7;
+    stringified[index8] = str;
+    return index8;
   }
-  const index6 = flatten(value);
-  if (index6 < 0)
-    return `${index6}`;
+  const index7 = flatten(value);
+  if (index7 < 0)
+    return `${index7}`;
   return `[${stringified.join(",")}]`;
 }
 function stringify_primitive2(thing) {
@@ -2747,8 +2894,8 @@ async function render_response({
   }
   const { client } = manifest2._;
   const modulepreloads = /* @__PURE__ */ new Set([...client.start.imports, ...client.app.imports]);
-  const stylesheets6 = new Set(client.app.stylesheets);
-  const fonts6 = new Set(client.app.fonts);
+  const stylesheets7 = new Set(client.app.stylesheets);
+  const fonts7 = new Set(client.app.fonts);
   const link_header_preloads = /* @__PURE__ */ new Set();
   const inline_styles = /* @__PURE__ */ new Map();
   let rendered;
@@ -2807,9 +2954,9 @@ async function render_response({
       for (const url of node.imports)
         modulepreloads.add(url);
       for (const url of node.stylesheets)
-        stylesheets6.add(url);
+        stylesheets7.add(url);
       for (const url of node.fonts)
-        fonts6.add(url);
+        fonts7.add(url);
       if (node.inline_styles) {
         Object.entries(await node.inline_styles()).forEach(([k, v]) => inline_styles.set(k, v));
       }
@@ -2837,7 +2984,7 @@ async function render_response({
     head += `
 	<style${attributes.join("")}>${content}</style>`;
   }
-  for (const dep of stylesheets6) {
+  for (const dep of stylesheets7) {
     const path = prefixed(dep);
     const attributes = ['rel="stylesheet"'];
     if (inline_styles.has(dep)) {
@@ -2851,7 +2998,7 @@ async function render_response({
     head += `
 		<link href="${path}" ${attributes.join(" ")}>`;
   }
-  for (const dep of fonts6) {
+  for (const dep of fonts7) {
     const path = prefixed(dep);
     if (resolve_opts.preload({ type: "font", path })) {
       const ext = dep.slice(dep.lastIndexOf(".") + 1);
@@ -3558,11 +3705,11 @@ async function render_page(event, page2, options2, manifest2, state, resolve_opt
           const error2 = await handle_error_and_jsonify(event, options2, err);
           while (i--) {
             if (page2.errors[i]) {
-              const index6 = (
+              const index7 = (
                 /** @type {number} */
                 page2.errors[i]
               );
-              const node2 = await manifest2._.nodes[index6]();
+              const node2 = await manifest2._.nodes[index7]();
               let j = i;
               while (!branch[j])
                 j -= 1;
@@ -3836,10 +3983,10 @@ function create_fetch({ event, options: options2, manifest: manifest2, state, ge
         const is_asset = manifest2.assets.has(filename);
         const is_asset_html = manifest2.assets.has(filename_html);
         if (is_asset || is_asset_html) {
-          const file6 = is_asset ? filename : filename_html;
+          const file7 = is_asset ? filename : filename_html;
           if (state.read) {
             const type = is_asset ? manifest2.mimeTypes[filename.slice(filename.lastIndexOf("."))] : "text/html";
-            return new Response(state.read(file6), {
+            return new Response(state.read(file7), {
               headers: type ? { "content-type": type } : {}
             });
           }
@@ -3897,14 +4044,14 @@ function normalize_fetch_input(info, init2, url) {
 }
 function validator(expected) {
   const set = new Set(expected);
-  function validate(module, file6) {
+  function validate(module, file7) {
     if (!module)
       return;
     for (const key2 in module) {
       if (key2[0] === "_" || set.has(key2))
         continue;
-      const hint = hint_for_supported_files(key2, file6?.slice(file6.lastIndexOf("."))) ?? `valid exports are ${expected.join(", ")}, or anything with a '_' prefix`;
-      throw new Error(`Invalid export '${key2}'${file6 ? ` in ${file6}` : ""} (${hint})`);
+      const hint = hint_for_supported_files(key2, file7?.slice(file7.lastIndexOf("."))) ?? `valid exports are ${expected.join(", ")}, or anything with a '_' prefix`;
+      throw new Error(`Invalid export '${key2}'${file7 ? ` in ${file7}` : ""} (${hint})`);
     }
   }
   return validate;
@@ -4288,16 +4435,17 @@ _manifest = new WeakMap();
 var manifest = {
   appDir: "_app",
   appPath: "_app",
-  assets: /* @__PURE__ */ new Set([".DS_Store", "favicon.png", "images/.DS_Store", "images/essentials/rucksack.jpg", "images/hero.jpg"]),
+  assets: /* @__PURE__ */ new Set([".DS_Store", "favicon.png", "images/.DS_Store", "images/essentials/brotree.jpg", "images/essentials/camp-buddy.jpg", "images/essentials/dd-tarp.jpg", "images/essentials/hultafors-hachet.jpg", "images/essentials/lansky-blade-medic.jpg", "images/essentials/mardingtop-75.jpg", "images/essentials/muela-rhino-olive.jpg", "images/essentials/nitecore-nu43.jpg", "images/essentials/nordmut.jpg", "images/essentials/rucksack.jpg", "images/hero.jpg", "images/sleep/exped-dura-5r.jpg", "images/sleep/flextailgear-tiny-pump.jpg", "images/sleep/forceatt-tent.jpg", "images/sleep/onetigris-kompound.jpg", "images/sleep/onetigris-night-protector.jpg", "images/sleep/vaude-sioux-800.jpg"]),
   mimeTypes: { ".png": "image/png", ".jpg": "image/jpeg" },
   _: {
-    client: { "start": { "file": "_app/immutable/entry/start.21b72480.js", "imports": ["_app/immutable/entry/start.21b72480.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.480f0eda.js"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.7bc634f1.js", "imports": ["_app/immutable/entry/app.7bc634f1.js", "_app/immutable/chunks/index.22788120.js"], "stylesheets": [], "fonts": [] } },
+    client: { "start": { "file": "_app/immutable/entry/start.d8c37fd8.js", "imports": ["_app/immutable/entry/start.d8c37fd8.js", "_app/immutable/chunks/index.22788120.js", "_app/immutable/chunks/singletons.48935173.js"], "stylesheets": [], "fonts": [] }, "app": { "file": "_app/immutable/entry/app.409caea0.js", "imports": ["_app/immutable/entry/app.409caea0.js", "_app/immutable/chunks/index.22788120.js"], "stylesheets": [], "fonts": [] } },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
       () => Promise.resolve().then(() => (init__3(), __exports3)),
       () => Promise.resolve().then(() => (init__4(), __exports4)),
-      () => Promise.resolve().then(() => (init__5(), __exports5))
+      () => Promise.resolve().then(() => (init__5(), __exports5)),
+      () => Promise.resolve().then(() => (init__6(), __exports6))
     ],
     routes: [
       {
@@ -4319,6 +4467,13 @@ var manifest = {
         pattern: /^\/essentials\/?$/,
         params: [],
         page: { layouts: [0], errors: [1], leaf: 4 },
+        endpoint: null
+      },
+      {
+        id: "/sleep",
+        pattern: /^\/sleep\/?$/,
+        params: [],
+        page: { layouts: [0], errors: [1], leaf: 5 },
         endpoint: null
       }
     ],
