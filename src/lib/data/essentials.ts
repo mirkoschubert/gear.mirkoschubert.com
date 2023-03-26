@@ -4,7 +4,7 @@ export default [
   {
     name: 'Muela Rhino Olive',
     description: 'Knife',
-    image: '/images/essentials/muela-rhino-olive.jpg',
+    image: '/essentials/muela-rhino-olive.jpg',
     url: 'https://amzn.to/40z0hg2',
     price: 69.60,
     weight: 207,
@@ -12,7 +12,7 @@ export default [
   {
     name: 'Lansky Blademedic',
     description: 'Knife Sharpener',
-    image: '/images/essentials/lansky-blade-medic.jpg',
+    image: '/essentials/lansky-blade-medic.jpg',
     url: 'https://amzn.to/3lQjGKB',
     price: 19.32,
     weight: 105,
@@ -20,7 +20,7 @@ export default [
   {
     name: 'Camp Buddy "Bamboo" XXL',
     description: 'Fire Steel',
-    image: '/images/essentials/camp-buddy.jpg',
+    image: '/essentials/camp-buddy.jpg',
     url: 'https://amzn.to/40iCtxk',
     price: 21.99,
     weight: 200,
@@ -28,7 +28,7 @@ export default [
   {
     name: 'Brotree 550/9 30m ',
     description: 'Paracord',
-    image: '/images/essentials/brotree.jpg',
+    image: '/essentials/brotree.jpg',
     url: 'https://amzn.to/40fEhar',
     price: 14.99,
     weight: 250,
@@ -36,7 +36,7 @@ export default [
   {
     name: 'DD Hammocks Olive',
     description: 'Tarp',
-    image: '/images/essentials/dd-tarp.jpg',
+    image: '/essentials/dd-tarp.jpg',
     url: 'https://amzn.to/42JDiR8',
     price: 69.99,
     weight: 790,
@@ -48,7 +48,7 @@ export default [
   {
     name: 'Nitecore NU43',
     description: 'Head Lamp',
-    image: '/images/essentials/nitecore-nu43.jpg',
+    image: '/essentials/nitecore-nu43.jpg',
     url: 'https://amzn.to/3nqyIaE',
     price: 69.99,
     weight: 115,
@@ -56,7 +56,7 @@ export default [
   {
     name: 'Mardingtop 75L green',
     description: 'Backpack',
-    image: '/images/essentials/mardingtop-75.jpg',
+    image: '/essentials/mardingtop-75.jpg',
     url: 'https://amzn.to/3TMRMM9',
     price: 102.99,
     weight: 2260,
@@ -69,7 +69,7 @@ export default [
   {
     name: 'Nordmut Poles Telescope',
     description: 'Trekking Poles',
-    image: '/images/essentials/nordmut.jpg',
+    image: '/essentials/nordmut.jpg',
     url: 'https://amzn.to/40EflZF',
     price: 39.90,
     weight: 970
@@ -77,7 +77,7 @@ export default [
   {
     name: 'Hultafors Hultan',
     description: 'Hatchet',
-    image: '/images/essentials/hultafors-hachet.jpg',
+    image: '/essentials/hultafors-hachet.jpg',
     url: 'https://amzn.to/3npfjXf',
     price: 99.90,
     weight: 970,
