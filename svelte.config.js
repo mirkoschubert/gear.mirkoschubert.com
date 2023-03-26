@@ -11,7 +11,12 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: dev ? adapter() : vercel(),
+		adapter: dev ? adapter() : vercel({
+      runtime: 'edge'
+    }),
+    alias: {
+      $img: dev ? '/images' : '/static/images'
+    },
     files: {
 			assets: 'static',
 			lib: 'src/lib',
