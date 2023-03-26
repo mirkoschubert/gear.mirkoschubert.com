@@ -1,0 +1,153 @@
+/** Component: Header **/
+.header
+  background url(images/hero.jpg) no-repeat center center
+  background-size cover
+
+  .overlay
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding 4rem
+    background-color rgba(0,0,0,.2)
+
+    a
+      text-decoration none
+
+      .title
+        color #131313
+        font-size 2rem
+        font-weight 600
+        letter-spacing .75rem
+        transition color .3s ease-in
+
+      &:hover
+        .title
+          color #434343
+
+
+/** Component: Navigation **/
+.navigation
+  display flex
+  align-items center
+  justify-content center
+
+  .item
+    background #f4f4f4
+    color #131313
+    text-decoration none
+    font-weight 400
+    line-height 1
+    padding 4px 6px
+    margin-right 1rem
+
+    &:hover
+      background #d2d2d2
+
+    &:last-child
+      margin-right 0
+
+
+/** Component: Section **/
+.section
+  padding 0 2rem 4rem
+
+  @media screen and (min-width: 480px)
+    padding 0 4rem 4rem
+
+
+/** Component: ProductListMeta **/
+.products-meta
+  margin-bottom 2rem
+  margin-top 2rem
+  display flex
+  align-items center
+  justify-content space-between
+
+  h1
+    margin 0
+
+  .details
+    display: flex;
+
+    &>div
+      background-color #a2a2a2
+      color #131313
+      font-weight 400
+      font-size .875rem
+      line-height 1
+      padding 4px 6px
+      margin-right .5rem
+
+
+/** Component: ProductList **/
+.product-list
+  display grid
+  grid-template-columns repeat(1, minmax(150px, 1fr))
+  gap 1rem
+
+  @media screen and (min-width: 480px)
+    grid-template-columns repeat(2, minmax(150px, 1fr))
+
+  @media screen and (min-width: 800px)
+    grid-template-columns repeat(3, minmax(150px, 1fr))
+
+  @media screen and (min-width: 1280px)
+    grid-template-columns repeat(4, minmax(150px, 1fr))
+
+  .product
+    position relative
+    aspect-ratio 4/3
+
+    .product-image
+      width 100%
+      aspect-ratio 4/3
+      object-fit cover
+      object-position center center
+
+    .overlay
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right 0
+      padding 1rem
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+      background-color rgba(0,0,0,.5)
+      text-decoration none
+      color #d3d3d3
+
+      .product-title
+        margin 0
+        text-align center
+
+      .product-description
+        margin 0
+
+      .details
+        margin-top 1rem
+        display flex
+
+        &>div
+          background-color #a2a2a2
+          color #131313
+          font-weight 400
+          font-size .875rem
+          line-height 1
+          padding 4px 6px
+          margin-right .5rem
+          /* opacity 0
+          visibility hidden */
+          transition all .3s ease-in
+
+          &:last-child
+            margin-right 0
+
+      /* &:hover
+        .details
+          &>div
+            opacity 1
+            visibility visible */
